@@ -5,7 +5,7 @@ import logo from './../assets/images/logo.png';
 export default function Navbar({ setPage }) {
    const cartProducts = useSelector((state) => state.cart);
    const totalCartProducts = cartProducts.reduce(
-      (total, products) => (total += products.productQuantity),
+      (total, product) => (total += product.productStock),
       0
    );
    return (

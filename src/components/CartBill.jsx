@@ -4,7 +4,7 @@ export default function CartBill() {
    const cartProducts = useSelector((state) => state.cart);
    const totalPrice = cartProducts.reduce(
       (total, product) =>
-         (total += product.productPrice * product.productQuantity),
+         (total += product.productPrice * product.productStock),
       0
    );
 

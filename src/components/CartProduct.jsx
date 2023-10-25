@@ -34,12 +34,10 @@ export default function CartProduct({ product }) {
                >
                   <i className="text-lg fa-solid fa-plus"></i>
                </button>
-               <span className="lws-cartQuantity">
-                  {product.productQuantity}
-               </span>
+               <span className="lws-cartQuantity">{product.productStock}</span>
                <button
                   onClick={() =>
-                     product.productQuantity > 1 &&
+                     product.productStock > 1 &&
                      dispatch(cartRemove(incrementProduct))
                   }
                   className="lws-decrementQuantity"
@@ -51,7 +49,7 @@ export default function CartProduct({ product }) {
             <p className="text-lg font-bold">
                BDT{' '}
                <span className="lws-calculatedPrice">
-                  {product.productQuantity * product.productPrice}
+                  {product.productStock * product.productPrice}
                </span>
             </p>
          </div>
