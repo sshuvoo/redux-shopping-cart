@@ -28,6 +28,11 @@ export default function ProductInputForm() {
                productStock: Number(productStock),
             })
          );
+         setProductName('');
+         setProductCategory('');
+         setProductImage('');
+         setProductPrice('');
+         setProductStock('');
       }
    };
 
